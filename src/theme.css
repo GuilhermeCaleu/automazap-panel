@@ -1,0 +1,207 @@
+:root {
+  --bg: #020617;
+  --bg-alt: #0f172a;
+  --text: #e5e7eb;
+  --accent: #3b82f6;
+  --card-bg: #020617;
+  --border: #1e293b;
+}
+
+:root[data-theme='light'] {
+  --bg: #f3f4f6;
+  --bg-alt: #e5e7eb;
+  --text: #111827;
+  --accent: #2563eb;
+  --card-bg: #ffffff;
+  --border: #d1d5db;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  background: var(--bg-alt);
+  border-bottom: 1px solid var(--border);
+}
+
+.logo-text {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.user-label {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.theme-toggle,
+.logout-btn,
+.primary-btn {
+  border-radius: 0.5rem;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  background: var(--accent);
+  color: white;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.logout-btn {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.layout {
+  display: flex;
+  flex: 1;
+  min-height: calc(100vh - 56px);
+}
+
+.sidebar {
+  width: 220px;
+  background: var(--bg-alt);
+  border-right: 1px solid var(--border);
+  padding: 1rem 0.5rem;
+}
+
+.sidebar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sidebar a {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.sidebar a.active {
+  background: var(--accent);
+  color: white;
+}
+
+.content {
+  flex: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 0.5rem;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border: 1px solid var(--border);
+}
+
+.form-group {
+  margin-bottom: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+  padding: 0.5rem;
+  background: var(--bg);
+  color: var(--text);
+}
+
+textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.list {
+  margin-top: 0.5rem;
+}
+
+.error-text {
+  color: #f97373;
+  font-size: 0.9rem;
+}
+
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 360px;
+  background: var(--card-bg);
+  border-radius: 1rem;
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  box-shadow: 0 10px 40px rgba(15, 23, 42, 0.5);
+}
+
+.login-card h1 {
+  margin-bottom: 0.25rem;
+}
+
+.login-subtitle {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.login-hint {
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
